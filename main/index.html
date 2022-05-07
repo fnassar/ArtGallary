@@ -95,21 +95,27 @@
 
     <!-- Image link template to be reused. -->
     <script id="link" type="text/html">
-        <a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: ${thumb}" event-set__mouseenter="scale: 1.2 1.2 1" event-set__mouseleave="scale: 1 1 1" event-set__click="_target: #image-360; _delay: 300; material.src: ${src}"
-            proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound"></a-entity>
+        <a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: ${thumb}" event-set__mouseenter="scale: 1.2 1.2 1" event-set__mouseleave="scale: 1 1 1" event-set__click="_target: #layover; _delay: 300; material.src: ${src}"
+            proxy-event="event: click; to: #layover; as: fade" sound="on: click; src: #click-sound"></a-entity>
     </script>
 </head>
 
 <body>
     <a-scene>
         <a-assets>
-            <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
             <img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
             <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
             <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
             <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <img id="city" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
             <img id="cubes" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
             <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+
+            <!-- layover -->
+            <a-mixin id="movieImage" geometry="primitive: plane; width: 1.5; height: 0.81" material="src: #ponyo; shader: flat; transparent: true" position="0 0.495 0.002"></a-mixin>
+            <!-- layover images -->
+            <img id="ponyo" src="https://cdn.aframe.io/examples/ui/ponyo.jpg" crossorigin="anonymous" />
+            <img id="ponyoPoster" src="https://cdn.aframe.io/examples/ui/ponyoPoster.jpg" crossorigin="anonymous" />
 
         </a-assets>
 
@@ -118,9 +124,16 @@
 
         <!-- Image links. -->
         <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-            <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#city" data-thumb="#cubes-thumb"></a-entity>
             <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-            <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+            <a-entity template="src: #link" data-src="#city" data-thumb="#sechelt-thumb"></a-entity>
+        </a-entity>
+
+        <!-- Layover links -->
+        <a-entity id="layover" layout="margin: 1.5" position="0 -5 -4" info-panel visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 1.5; height: 1.8" material="color: #333333; shader: flat; transparent: false" class="raycastable">
+            <a-entity id="ponyoMovieImage" mixin="movieImage" material="src: #ponyo" visible="false"></a-entity>
+            <a-entity id="movieTitle" position="-0.68 -0.1 0" text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Ponyo (2003)"></a-entity>
+            <a-entity id="movieDescription" position="-0.68 -0.2 0" text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></a-entity>
         </a-entity>
 
         <!-- Camera + cursor. -->
