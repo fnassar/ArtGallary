@@ -4,24 +4,24 @@ AFRAME.registerComponent('info-panel', {
         var buttonEls = document.querySelectorAll('.menu-button');
         var fadeBackgroundEl = this.fadeBackgroundEl = document.querySelector('#fadeBackground');
 
-        this.movieImageEl;
-        this.movieTitleEl = document.querySelector('#movieTitle');
-        this.movieDescriptionEl = document.querySelector('#movieDescription');
+        this.artImageEl;
+        this.artTitleEl = document.querySelector('#artTitle');
+        this.artDescriptionEl = document.querySelector('#artDescription');
 
-        this.movieInfo = {
+        this.artInfo = {
             karigurashiButton: {
                 title: 'The Secret World of Arrietty (2010)',
-                imgEl: document.querySelector('#karigurashiMovieImage'),
+                imgEl: document.querySelector('#karigurashiartImage'),
                 description: 'Based on the 1952 novel The Borrowers by Mary Norton, an English author of children\'s books, about a family of tiny people who live secretly in the walls and floors of a typical household, borrowing items from humans to survive.'
             },
             kazetachinuButton: {
                 title: 'The Wind Rises (2013)',
-                imgEl: document.querySelector('#kazetachinuMovieImage'),
+                imgEl: document.querySelector('#kazetachinuartImage'),
                 description: 'The Wind Rises is a fictionalised biographical film of Jiro Horikoshi (1903, 1982), designer of the Mitsubishi A5M fighter aircraft and its successor, the Mitsubishi A6M Zero, used by the Empire of Japan during World War II. The film is adapted from Miyazaki\'s manga of the same name, which was in turn loosely based on both the 1937 novel The Wind Has Risen by Tatsuo Hori and the life of Jiro Horikoshi.'
             },
             ponyoButton: {
                 title: 'Ponyo (2003)',
-                imgEl: document.querySelector('#ponyoMovieImage'),
+                imgEl: document.querySelector('#ponyoartImage'),
                 description: 'It is the eighth film Miyazaki directed for Studio Ghibli, and his tenth overall. The film tells the story of Ponyo (Nara), a goldfish who escapes from the ocean and is rescued by a five-year-old human boy, Sōsuke (Doi) after she is washed ashore while trapped in a glass jar.'
             }
         };
@@ -40,7 +40,7 @@ AFRAME.registerComponent('info-panel', {
     },
 
     onMenuButtonClick: function(evt) {
-        var movieInfo = this.movieInfo[evt.currentTarget.id];
+        var artInfo = this.artInfo[evt.currentTarget.id];
 
         this.backgroundEl.object3D.scale.set(1, 1, 1);
 
@@ -49,12 +49,12 @@ AFRAME.registerComponent('info-panel', {
         this.el.object3D.visible = true;
         this.fadeBackgroundEl.object3D.visible = true;
 
-        if (this.movieImageEl) { this.movieImageEl.object3D.visible = false; }
-        this.movieImageEl = movieInfo.imgEl;
-        this.movieImageEl.object3D.visible = true;
+        if (this.artImageEl) { this.artImageEl.object3D.visible = false; }
+        this.artImageEl = artInfo.imgEl;
+        this.artImageEl.object3D.visible = true;
 
-        this.movieTitleEl.setAttribute('text', 'value', movieInfo.title);
-        this.movieDescriptionEl.setAttribute('text', 'value', movieInfo.description);
+        this.artTitleEl.setAttribute('text', 'value', artInfo.title);
+        this.artDescriptionEl.setAttribute('text', 'value', artInfo.description);
     },
 
     onBackgroundClick: function(evt) {
