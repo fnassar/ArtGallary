@@ -1,20 +1,20 @@
 // elements
 let home;
-let pdf;
+let statment;
 
 window.addEventListener('load', () => {
     home = document.getElementById('homePage');
-    pdf = document.getElementById('pdf');
+    statment = document.getElementById('statment');
     home.style.display = "flex";
-    pdf.style.display = "none";
+    statment.style.display = "none";
     console.log(home);
 
     home.addEventListener('click', () => {
         home.style.display = "none";
-        pdf.style.display = "flex";
+        statment.style.display = "flex";
     })
 
-    pdf.addEventListener('click', () => {
+    statment.addEventListener('click', () => {
         window.location = "./gallery.html";
     })
 })
