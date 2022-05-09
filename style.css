@@ -84,9 +84,6 @@ body {
 
 /* pdf */
 
-
-/* scene */
-
 .statment {
     cursor: pointer;
     min-width: 100vw;
@@ -95,4 +92,89 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-image: url(images/tunnel3.png);
+}
+
+.container {
+    margin: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 98vw;
+    height: 95vh;
+    background-color: #223e;
+}
+
+.statment_title {
+    max-width: 80vw;
+    max-height: 65vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 3vh;
+}
+
+.statment_instruction {
+    margin: 0 0 9vh 0;
+    max-width: 50vw;
+    text-align: center;
+}
+
+.statment_title h1 {
+    font-size: 5vh;
+}
+
+.statment_title h1,
+p {
+    max-width: 70vw;
+    text-align: center;
+    margin: 2vh;
+}
+
+.galleryTitle1 {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    max-width: 2vh;
+    text-orientation: upright;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.galleryTitle1 p {
+    background-color: #002a;
+    padding: 2vh;
+    font-size: 6vh;
+    margin: 0;
+    height: auto;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 2vh 2vh;
+}
+
+.galleryTitle2 {
+    position: absolute;
+    top: 25vh;
+    right: 10vw;
+    max-width: 2vh;
+    text-orientation: upright;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.galleryTitle2 p {
+    background-color: #002a;
+    padding: 2vh;
+    font-size: 6vh;
+    margin: 0;
+    height: auto;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 2vh 2vh;
 }
