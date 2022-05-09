@@ -1,0 +1,92 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002;
+}
+
+.homePage {
+    min-height: 95vh;
+    width: 98vw;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images/tunnel3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+}
+
+.homePage_title {
+    background-color: #002a;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text {
+    width: 30vw;
+    text-align: center;
+    margin: 1vh 1vw;
+}
+
+.title {
+    font-size: 10vh;
+}
+
+.points1 {
+    /* width: 100%; */
+    font-size: 5vh;
+    line-height: 0.5;
+    text-align: left;
+    margin: 0 4vh;
+    align-self: flex-start;
+}
+
+.points2 {
+    /* width: 100%; */
+    font-size: 5vh;
+    line-height: 0.5;
+    text-align: right;
+    margin: 0 4vh;
+    align-self: flex-end;
+}
+
+.names {
+    font-size: 3vh;
+    width: 30vh;
+    text-align: center;
+}
+
+.homePage_instruction {
+    background-color: #002a;
+    margin: 3vh;
+    height: 3vh;
+    padding: 0.5vh;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* pdf */
+
+
+/* scene */
+
+.a-scene {
+    min-width: 100vw;
+    min-height: 100vh;
+}
