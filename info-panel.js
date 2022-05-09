@@ -31,19 +31,19 @@ AFRAME.registerComponent('info-panel', {
             terraformsButton: {
                 title: 'Terraforms (2003)',
                 author: 'tba',
-                imgEl: document.querySelector('#bluedTreesartImage'),
+                imgEl: document.querySelector('#terraformsartImage'),
                 description: 'It is the eighth film Miyazaki directed for Studio Ghibli, and his tenth overall. The film tells the story of bluedTrees (Nara), a goldfish who escapes from the ocean and is rescued by a five-year-old human boy, Sōsuke (Doi) after she is washed ashore while trapped in a glass jar.'
             },
             oasisButton: {
                 title: 'Oasis (2003)',
                 author: 'tba',
-                imgEl: document.querySelector('#bluedTreesartImage'),
+                imgEl: document.querySelector('#oasisartImage'),
                 description: 'It is the eighth film Miyazaki directed for Studio Ghibli, and his tenth overall. The film tells the story of bluedTrees (Nara), a goldfish who escapes from the ocean and is rescued by a five-year-old human boy, Sōsuke (Doi) after she is washed ashore while trapped in a glass jar.'
             },
             acidrainButton: {
                 title: 'acid rain (2003)',
                 author: 'tba',
-                imgEl: document.querySelector('#bluedTreesartImage'),
+                imgEl: document.querySelector('#acidrainartImage'),
                 description: 'It is the eighth film Miyazaki directed for Studio Ghibli, and his tenth overall. The film tells the story of bluedTrees (Nara), a goldfish who escapes from the ocean and is rescued by a five-year-old human boy, Sōsuke (Doi) after she is washed ashore while trapped in a glass jar.'
             }
 

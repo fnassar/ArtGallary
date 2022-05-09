@@ -18,14 +18,14 @@
     <a-scene background="color: #212" cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable" info-message="htmlSrc: #messageText">
         <a-assets>
             <a-asset-item id="messageText" src="message.html"></a-asset-item>
-            <img id="tunnel" src="/images/tunnel2.png">
+            <img id="tunnel" src="/images/tunnel4.png">
             <!--Item images -->
             <!-- WheatField -->
             <img id="wheatfield" src="images/wheatfield4.jpg">
             <img id="wheatfieldPoster" src="images/wheatfield3.jpg">
             <!-- <img id="wheatfieldBackground" src="images/"> -->
             <!-- Blued Treas -->
-            <img id="bluedTrees" src="images/bluedTrees2.jpg">
+            <img id="bluedTrees" src="images/bluedTrees4.png">
             <img id="bluedTreesPoster" src="images/bluedTrees.jpg">
             <!-- <img id="bluedTreesBackground" src="images/"> -->
             <!-- Erosion Casts -->
@@ -56,7 +56,7 @@
         <a-entity id="background" position="0 0 0" geometry="primitive: sphere; radius: 2.0" material="color: red; side: back; shader: flat" scale="0.001 0.001 0.001" visible="false" class="raycastable">
         </a-entity>
         <!-- camera and hand controls -->
-        <a-entity position="0 1.6 0" camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
+        <a-entity position="0 1.6 -0.1" camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
             <a-entity id="fadeBackground" geometry="primitive: sphere; radius: 2.5" material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
             </a-entity>
         </a-entity>
@@ -93,13 +93,14 @@
             </a-entity>
 
             <!-- Info panel of the selected art. -->
-            <a-entity id="infoPanel" position="0 -0.4 0.3" info-panel visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 1.9" ma terial="color: #235854; shader: flat; transparent: false" class="raycastable">
+            <a-entity id="infoPanel" position="0 -0.4 0.25" info-panel visible="false" scale="0.001 0.001 0.001" geometry="primitive: plane; width: 3; height: 1.9" ma terial="color: #235854; shader: flat; transparent: false" class="raycastable">
                 <a-entity id="bluedTreesartImage" mixin="artImage" material="src: #bluedTrees" visible="false"></a-entity>
                 <a-entity id="wheatfieldartImage" mixin="artImage" material="src: #wheatfield" visible="false"></a-entity>
                 <a-entity id="erosioncastsartImage" mixin="artImage" material="src: #erosioncasts" visible="false"></a-entity>
-                <a-entity id="bluedTreesartImage" mixin="artImage" material="src: #bluedTrees" visible="false"></a-entity>
-                <a-entity id="wheatfieldartImage" mixin="artImage" material="src: #wheatfield" visible="false"></a-entity>
-                <a-entity id="erosioncastsartImage" mixin="artImage" material="src: #erosioncasts" visible="false"></a-entity>
+                <a-entity id="terraformsartImage" mixin="artImage" material="src: #terraforms" visible="false"></a-entity>
+                <a-entity id="oasisartImage" mixin="artImage" material="src: #oasis" visible="false"></a-entity>
+                <a-entity id="acidrainartImage" mixin="artImage" material="src: #acidrain" visible="false"></a-entity>
+                <!-- text -->
                 <a-entity id="artTitle" position="-1.41 -0.05 0" text="shader: msdf; anchor: left; width: 2; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: bluedTrees (2003)"></a-entity>
                 <a-entity id="artAuthor" position="-1.4 -0.1 0" text="shader: msdf; anchor: left; width: 1; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: author (2003)"></a-entity>
                 <a-entity id="artDescription" position="-1.4 -0.2 0" text="baseline: top; wrapCount:130; width:2.8;shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: template"></a-entity>

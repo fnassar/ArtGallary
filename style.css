@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #002;
+    color: antiquewhite;
 }
 
 .homePage {
@@ -23,7 +24,7 @@ body {
     background-image: url(images/tunnel3.png);
     background-repeat: no-repeat;
     background-size: cover;
-    color: antiquewhite;
+    cursor: pointer;
 }
 
 .homePage_title {
@@ -86,7 +87,12 @@ body {
 
 /* scene */
 
-.a-scene {
+.pdf {
+    cursor: pointer;
     min-width: 100vw;
     min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
