@@ -107,17 +107,28 @@ body {
 }
 
 .statment_title {
-    max-width: 80vw;
-    max-height: 65vh;
+    width: 90vw;
+    height: 65vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding: 3vh;
+    /* padding: 3vh; */
+    overflow-y: scroll;
+    position: relative;
+    padding: 7vh 0 0 0;
+}
+
+.statment_title h1 {
+    font-size: 6vh;
+}
+
+.statment_title p {
+    font-size: 2.4vh;
 }
 
 .statment_instruction {
-    margin: 0 0 9vh 0;
+    margin: 0 0 0 0;
     max-width: 50vw;
     text-align: center;
 }
@@ -136,7 +147,7 @@ p {
 .galleryTitle1 {
     position: absolute;
     top: 10vh;
-    left: 10vw;
+    left: 8vw;
     max-width: 2vh;
     text-orientation: upright;
     display: flex;
@@ -159,7 +170,7 @@ p {
 .galleryTitle2 {
     position: absolute;
     top: 25vh;
-    right: 10vw;
+    right: 8vw;
     max-width: 2vh;
     text-orientation: upright;
     display: flex;
@@ -177,4 +188,12 @@ p {
     word-wrap: break-word;
     text-align: center;
     margin: 2vh 2vh;
+}
+
+.a-enter-vr-button {
+    display: none;
+}
+
+.a-info-message-button {
+    display: none;
 }
